@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>*
+
+    <div class="dropdown">
+        <button onclick="togglePopup()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    <script>
+      function togglePopup () {
+        document.querySelector("#myDropdown").classList.toggle("show");
+      }
+        
+       
+
+
+        
+        //document.querySelector("a").classList.toggle("show");
+        
+    </script>
+  </body>
+</html>
