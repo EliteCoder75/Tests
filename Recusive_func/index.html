@@ -16,12 +16,19 @@
         console.log(sumRange(5));   */
         
         //power function  / base case  
-        function power(base, exponent){
+/*        function power(base, exponent){
             if(exponent == 0) return 1;
             return base * power(base, exponent - 1);
         }
 
-        console.log(power(5,2));   
+        console.log(power(5,2));   */
+        function factorial(n){
+            if (n == 1){
+                return 1;
+            }
+            return n * factorial(n-1);
+        }
+        console.log(factorial(5)); 
 
     </script>
 
