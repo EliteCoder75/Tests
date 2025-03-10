@@ -31,14 +31,48 @@
         console.log(factorial(5)); */
 
         // multiplication of array elements 
-        function ArrayProduct(a){
+        /*function ArrayProduct(a){
             if (a.length === 0){
                 return 1;
             }
             let popped = a.pop();
             return popped * ArrayProduct(a);
         }
-        console.log(ArrayProduct([2,3,5])); 
+        console.log(ArrayProduct([2,3,5])); */
+
+        //if object contains element
+        function contains(obj, value){
+            for(var key in obj){
+                if(typeof obj[key] === 'object'){
+                    return contains(obj[key], value);
+                }
+
+                if (obj[key] === value){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        var nestedObject = {
+        data: {
+            info: {
+                stuff: {
+                    thing: {
+                        moreStuff: {
+                            magicNumber: 44,
+                            something: 'foo2'
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    let hasIt = contains(nestedObject, 44); // true
+    let doesntHaveIt = contains(nestedObject, "foo"); // false
+    console.log(hasIt);
+    console.log(doesntHaveIt);
 
     </script>
 
