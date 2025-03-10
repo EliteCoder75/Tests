@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //sum of n numbers
+        function sumRange(n, total=0){
+            if (n == 0){
+                return total;
+            }
+            return sumRange(n-1, total + n);
+        }
+        console.log(sumRange(5));   
+
+    </script>
+
+</head>
+<body>
+
+    
+</body>
+</html>
